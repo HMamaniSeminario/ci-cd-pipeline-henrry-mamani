@@ -1,0 +1,52 @@
+name: CI Básico
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test_and_build:
+    name: Pruebas y Construcción
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4
+
+    - name: Configurar Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'yarn'
+        cache-dependency-path: 'yarn.lock'
+
+    - name: Instalar dependencias
+      run: yarn install --frozen-lockfile
+
+    - name: Ejecutar Tests Unitarios
+      run: yarn test:unit
+
+    - name: Ejecutar Tests de Integración
+      run: yarn test:integration
+
+    - name: Empaquetar la aplicación (Build Artifact)
+      run: |
+        zip -r app-build.zip . -x "node_modules/*" ".git/*" # Excluye node_modules y .git
+      shell: bash
+
+    - name: Subir Artifact de la Construcción
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-build-${{ matrix.node-version }}
+        path: app-build.zip
+        retention-days: 5 
