@@ -1196,7 +1196,7 @@ dezalgo@^1.0.4:
     asap "^2.0.0"
     wrappy "1"
 
-dotenv@^17.0.0:
+dotenv@17.0.0:
   version "17.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.0.0.tgz#0b0336dc1a4237bcfa772e01d5587e98ebb7e3c2"
   integrity sha512-A0BJ5lrpJVSfnMMXjmeO0xUnoxqsBHWCoqqTnGwGYVdnctqXXUEhJOO7LxmgxJon9tEZFGpe0xPRX0h2v3AANQ==
@@ -1336,7 +1336,7 @@ expect@30.0.3:
     jest-mock "30.0.2"
     jest-util "30.0.2"
 
-express@^5.1.0:
+express@5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/express/-/express-5.1.0.tgz#d31beaf715a0016f0d53f47d3b4d7acf28c75cc9"
   integrity sha512-DT9ck5YIRU+8GYzzU5kT3eHGA5iL+1Zd0EutOmTE9Dtk+Tvuzd23VBU+ec7HPNSTxXYO55gPV/hq4pSBJDjFpA==
@@ -2064,7 +2064,7 @@ jest-worker@30.0.2:
     merge-stream "^2.0.0"
     supports-color "^8.1.1"
 
-jest@^30.0.3:
+jest@30.0.3:
   version "30.0.3"
   resolved "https://registry.yarnpkg.com/jest/-/jest-30.0.3.tgz#fc3b6b370e2820d718ea299d159a7ba4637dbd35"
   integrity sha512-Uy8xfeE/WpT2ZLGDXQmaYNzw2v8NUKuYeKGtkS6sDxwsdQihdgYCXaKIYnph1h95DN5H35ubFDm0dfmsQnjn4Q==
@@ -2717,7 +2717,7 @@ superagent@^10.2.1:
     mime "2.6.0"
     qs "^6.11.0"
 
-supertest@^7.1.1:
+supertest@7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/supertest/-/supertest-7.1.1.tgz#c5e7e2d047fbbe4403b17b2622dc5323adc39f11"
   integrity sha512-aI59HBTlG9e2wTjxGJV+DygfNLgnWbGdZxiA/sgrnNNikIW8lbDvCtF6RnhZoJ82nU7qv7ZLjrvWqCEm52fAmw==
