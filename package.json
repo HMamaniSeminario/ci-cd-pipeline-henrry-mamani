@@ -12,5 +12,11 @@
   "devDependencies": {
     "jest": "30.0.3",
     "supertest": "7.1.1"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "jest",
+    "test:unit": "jest tests/unit.test.js",
+    "test:integration": "jest tests/integration.test.js"
   }
 }
